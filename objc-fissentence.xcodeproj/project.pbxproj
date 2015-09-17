@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A87EFCC1BAA4D6500A2F441 /* FISSentence.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A87EFCB1BAA4D6500A2F441 /* FISSentence.m */; };
 		26597E196C8FD1EFCC3542D3 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = F6FAF44C9ADBD46B1607187F /* LaunchScreen.xib */; };
 		2840B5F1BD3D2BF1903BF269 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52E15CCACDD19D3F6BA2DD7 /* Foundation.framework */; };
 		29070F8F14621F57C7633941 /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0988762905FC7087BA692328 /* libPods-unit_tests.a */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		0988762905FC7087BA692328 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A87EFCA1BAA4D6500A2F441 /* FISSentence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISSentence.h; sourceTree = "<group>"; };
+		0A87EFCB1BAA4D6500A2F441 /* FISSentence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSentence.m; sourceTree = "<group>"; };
 		0D1A8291CA512245B71945FD /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DC71991C1721B5F6D46A7D1 /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1AF032B5E13A5AE04649AAE6 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 			children = (
 				9747AFC1CEFF3C81F5C70287 /* FISAppDelegate.h */,
 				559E3338F3745BA4CFAD84BA /* FISAppDelegate.m */,
+				0A87EFCA1BAA4D6500A2F441 /* FISSentence.h */,
+				0A87EFCB1BAA4D6500A2F441 /* FISSentence.m */,
 				0DC71991C1721B5F6D46A7D1 /* Main.storyboard */,
 				8222666202D6947F77ECE0A6 /* Resources */,
 			);
@@ -307,6 +312,7 @@
 			files = (
 				5FDA21ED38E240D4C7579DE3 /* FISAppDelegate.m in Sources */,
 				4DBA1C872FBD2F74327A9322 /* Main.storyboard in Sources */,
+				0A87EFCC1BAA4D6500A2F441 /* FISSentence.m in Sources */,
 				26597E196C8FD1EFCC3542D3 /* LaunchScreen.xib in Sources */,
 				C2976F0EE5E5EEC67B92473E /* main.m in Sources */,
 			);
