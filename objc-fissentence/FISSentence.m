@@ -25,7 +25,9 @@
 @implementation FISSentence
 
 - (void)addWord:(NSString *)word {
-    [self.words addObject:word];
+    if ([self validWord:word]) {
+        [self.words addObject:word];
+    }
     [self assembleSentence];
 }
 
@@ -56,7 +58,7 @@
 }
 
 - (BOOL)validWord:(NSString *)word {
-    return NO;
+    return [word length] > 0 && ![word isEqualToString:@" "];
 }
 
 - (BOOL)validPunctuation:(NSString *)punctuation {
