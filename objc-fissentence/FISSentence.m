@@ -32,7 +32,20 @@
 }
 
 - (void)addWords:(NSArray *)words withPunctuation:(NSString *)punctuation {
+    /*The addWords:withPunctuation: method should add the strings in the words argument array to the end of the words property array, 
+     and it should overwrite the string in the punctuation property with the punctuation argument string.
+     */
+    if ([words count] == 0) {
+        return;
+    }
     
+    if (![self validPunctuation:punctuation]) {
+        return;
+    }
+    self.punctuation = punctuation;
+    for(NSUInteger i=0; i < [words count]; i++) {
+        [self addWord:words[i]];
+    }
 }
 
 - (void)removeWordAtIndex:(NSUInteger)index {
@@ -62,7 +75,16 @@
 }
 
 - (BOOL)validPunctuation:(NSString *)punctuation {
-    return NO;
+    BOOL singleChar = [punctuation length] == 1;
+    BOOL validPunctuation = NO;
+    NSArray *validPunctuationChars = @[@".", @"?", @"!", @",", @";", @":", @"—"];
+    for (NSUInteger i = 0; i < [validPunctuationChars count]; i++) {
+        validPunctuation = [punctuation containsString:validPunctuationChars[i]];
+        if(validPunctuation) {
+            break;
+        }
+    }
+    return singleChar && validPunctuation;
 }
 
 - (BOOL)validIndex:(NSUInteger)index {
