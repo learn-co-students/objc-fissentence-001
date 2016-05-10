@@ -32,19 +32,11 @@
 }
 
 - (void)addWords:(NSArray *)words withPunctuation:(NSString *)punctuation {
-    /*The addWords:withPunctuation: method should add the strings in the words argument array to the end of the words property array, 
-     and it should overwrite the string in the punctuation property with the punctuation argument string.
-     */
-    if ([words count] == 0) {
-        return;
-    }
-    
-    if (![self validPunctuation:punctuation]) {
-        return;
-    }
-    self.punctuation = punctuation;
-    for(NSUInteger i=0; i < [words count]; i++) {
-        [self addWord:words[i]];
+    if ([words count] > 0 && [self validPunctuation:punctuation]) {
+        self.punctuation = punctuation;
+        for(NSUInteger i=0; i < [words count]; i++) {
+            [self addWord:words[i]];
+        }
     }
 }
 
