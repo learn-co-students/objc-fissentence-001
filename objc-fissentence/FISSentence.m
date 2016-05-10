@@ -25,7 +25,8 @@
 @implementation FISSentence
 
 - (void)addWord:(NSString *)word {
-    
+    [self.words addObject:word];
+    [self assembleSentence];
 }
 
 - (void)addWords:(NSArray *)words withPunctuation:(NSString *)punctuation {
@@ -49,7 +50,9 @@
 }
 
 - (void)assembleSentence {
-    
+    NSString *sentence = [self.words componentsJoinedByString:@" "];
+    sentence = [sentence stringByAppendingString:self.punctuation];
+    self.sentence = sentence;
 }
 
 - (BOOL)validWord:(NSString *)word {
