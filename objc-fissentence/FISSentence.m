@@ -49,7 +49,11 @@
 }
 
 - (void)removeWordAtIndex:(NSUInteger)index {
-    
+    if(![self validIndex:index]) {
+        return;
+    }
+    [self.words removeObjectAtIndex:index];
+    [self assembleSentence];
 }
 
 - (void)insertWord:(NSString *)word atIndex:(NSUInteger)index {
@@ -88,7 +92,7 @@
 }
 
 - (BOOL)validIndex:(NSUInteger)index {
-    return NO;
+    return index <[self.words count];
 }
 
 @end
