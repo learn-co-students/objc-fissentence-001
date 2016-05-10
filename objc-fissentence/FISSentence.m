@@ -57,15 +57,24 @@
 }
 
 - (void)insertWord:(NSString *)word atIndex:(NSUInteger)index {
-    
+    if([self validWord:word] && [self validIndex:index]) {
+        [self.words insertObject:word atIndex:index];
+    }
+    [self assembleSentence];
 }
 
 - (void)replacePunctuationWithPunctuation:(NSString *)punctuation {
-    
+    if([self validPunctuation:punctuation]) {
+        self.punctuation = punctuation;
+    }
+    [self assembleSentence];
 }
 
 - (void)replaceWordAtIndex:(NSUInteger)index withWord:(NSString *)word{
-    
+    if([self validWord:word] && [self validIndex:index]) {
+        [self.words replaceObjectAtIndex:index withObject:word];
+    }
+    [self assembleSentence];
 }
 
 - (void)assembleSentence {
@@ -92,7 +101,7 @@
 }
 
 - (BOOL)validIndex:(NSUInteger)index {
-    return index <[self.words count];
+    return index < [self.words count];
 }
 
 @end
